@@ -220,7 +220,7 @@
   ```
 <br>
 
-- ### id 속성(attribute)
+- ### id 속성(identifier attribute)
   - id 이름을 href에 넣으면 href 클릭시 id쪽으로 이동.
   - 속성이 중복되면 먼저 나오는 쪽으로 이동.
   - 고유식별자용도로 사용. 중복금지.
@@ -323,11 +323,86 @@
   ```
 <br>
 
-- ### method ettribute 
-
-  - 입력데이터의 전달방식을 선택한다.
-  - get 요청
-    - 주소에 데이터를 입력해서 보내는 방식.
+- ### label tag
+ 
+  - 해당 id ettribute 에 대해 input tag를 설명하는데 사용. 
+  - for ettribute 가 설명하고 있는 id ettribute 를 써 주어야한다.
   ```html
-  <from method="get"></from>
-  ``` 
+  <label for="search">input tag를 성명하는데 사용</label>
+  ```
+<br>
+
+- ### input(입력양식) tag
+
+  - 주로 form tag 내부에서 사용.
+
+  - ### method ettribute
+
+    - 입력데이터의 전달방식을 선택한다.
+    - get 요청(request)
+      - 주소에 데이터를 입력해서 보내는 방식.
+  ```html
+  <from method="get">
+    <input id="search" tyep="text" name="search">
+    <input type="submit">
+  </from>
+  ```
+    
+  - ### action ettribute
+
+    - 입력데이터의 전달위치를 지정.
+    - post 요청(request)
+      - get과 달리 비공개로 데이터를 전달하는 방식.
+  ```html
+  <form action="post">
+    <input id="search" tyep="text" name="search">
+    <input type="submit">
+  </form>
+  ```
+    
+  - ### type ettribute
+  
+    - 입력양식(input form)의 형태(form)를 지정.
+    - button, checkbox, file, hidden, image, password, radio, reset, submit, 
+    text, value, color, date, datetime, datetime-local, email, month, 
+    number, range, search, tel, time, url, week 등
+  ```html
+  <input id="search" tyep="text" name="search">
+  <input type="submit">
+  ```
+<br>
+
+- ### textarea tag
+
+  - 여러줄 글자를 입력할 때 사용.
+    - cols: 너비 지정.
+    - rows: 높이 지정.
+    - id  : identifier(식별자)
+    - name: form control 요소의 값(value)를 서버로 전송하기위한 속성.
+  ```html
+  <textarea name="reple" id="reple" cols="30" rows="10">Type here.</textarea>
+  ```
+<br>  
+
+- ### select tag
+- 
+  - 선택 양식을 생성
+  ```html
+  <select multiple="multiple" name="#" id="#" >
+              <optgroup label="IronMan">
+                  <option>MK.1</option>
+                  <option>MK.2</option>
+                  <option>MK.3</option>
+                  <option>MK.4</option>
+                  <option>MK.5</option>
+              </optgroup>
+              <optgroup label="AI">
+                  <option>Dum-E</option>
+                  <option>U</option>
+                  <option>자비스</option>
+                  <option>프라이데이</option>
+                  <option>베로니카</option>
+                  <option>이디스</option>
+              </optgroup>
+          </select >
+  ```
