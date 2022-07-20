@@ -35,8 +35,8 @@ background-color: orange;
 
   - 형태가 여러가지가 있다고 나오는데 사실 잘 보면 6가지 밖에 없다.
   ```css
-  *      {}  - 전체 선택자 
-  tag    {}  - 태그 선택자
+  *      { }  - 전체 선택자 
+  tag    { }  - 태그 선택자
   #id    { }  - 아이디 선택자
   .class { }  - 클레스 선택자
   :속성   { }  - 가상 클레스 선택자
@@ -77,3 +77,31 @@ background-color: orange;
   maximum-scale=1.0, minmum-scale=1.0, user-scalable=no, 
   target-densitydpi=medium-dpi" />
   ```
+  
+  - ### 반응형 웹
+    - ipad Vertical 높이 768px 
+    - Weppage Horizontal 넓이 960px
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Media Query Basic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            /* 화면 너비 0 픽셀 ~ 767 픽셀 */
+            @media screen and (max-width: 767px) {
+            }
+            /* 화면 너비 768픽셀 ~ 959 픽셀 */
+            @media screen and (min-width: 768px) and (max-width: 959px)
+            /* 화면 너비 960 픽셀 ~ 무한 픽셀 */
+            @media screen and (min-width: 960px) {
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Aenean luctus congue scelerisque. Maecenas aliquet ante.</p>
+    </body>
+    </html>
+    ```
