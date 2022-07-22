@@ -1,10 +1,34 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
+  import { spring } from 'svelte/motion';
+  import { pannable } from './pannable.js';
 
+  const coords = spring({ x: 0, y: 0 }, {
+	  stiffness: 0.2,
+	  damping: 0.4
+  });
+
+  function handlePanStart() {
+	  coords.stiffness = coords.damping = 1;
+  }
+
+  function handlePanMove(event) {
+	  coords.update($coords => ({
+		  x: $coords.x + event.detail.dx,
+		  y: $coords.y + event.detail.dy
+	  }));
+  }
+
+  function handlePanEnd(event) {
+	  coords.stiffness = 0.2;
+	  coords.damping = 0.4;
+	  coords.set({ x: 0, y: 0 });
+  }
 </script>
 
-<main>
+<main style="height: auto; width: 100%; border:1px solid red;">
+
   <div>
     <a href="https://vitejs.dev" target="_blank"> 
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
