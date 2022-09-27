@@ -260,7 +260,11 @@ async function render_endpoint(event, mod, state) {
     throw new Error("Cannot prerender endpoints that have mutative methods");
   }
   if (state.prerendering && !prerender) {
-    throw new Error(`${event.routeId} is not prerenderable`);
+    if (state.initiator) {
+      throw new Error(`${event.routeId} is not prerenderable`);
+    } else {
+      return new Response(void 0, { status: 204 });
+    }
   }
   try {
     const response = await handler(
@@ -272,7 +276,6 @@ async function render_endpoint(event, mod, state) {
       );
     }
     if (state.prerendering) {
-      response.headers.set("x-sveltekit-routeid", event.routeId);
       response.headers.set("x-sveltekit-prerender", String(prerender));
     }
     return response;
@@ -289,10 +292,12 @@ async function render_endpoint(event, mod, state) {
   }
 }
 function is_endpoint_request(event) {
-  const { method } = event.request;
+  const { method, headers } = event.request;
   if (method === "PUT" || method === "PATCH" || method === "DELETE") {
     return true;
   }
+  if (method === "POST" && headers.get("x-sveltekit-action") === "true")
+    return false;
   const accept = event.request.headers.get("accept") ?? "*/*";
   return negotiate(accept, ["*", "text/html"]) !== "text/html";
 }
@@ -494,6 +499,12 @@ function create_fetch({ event, options, state, route, prerender_default, resolve
       fetch: async (info2, init3) => {
         const request2 = normalize_fetch_input(info2, init3, event.url);
         const url = new URL(request2.url);
+        if (!request2.headers.has("origin")) {
+          request2.headers.set("origin", event.url.origin);
+        }
+        if ((request2.method === "GET" || request2.method === "HEAD") && (request2.mode === "no-cors" && url.origin !== event.url.origin || url.origin === event.url.origin)) {
+          request2.headers.delete("origin");
+        }
         if (url.origin !== event.url.origin) {
           if (`.${url.hostname}`.endsWith(`.${event.url.hostname}`) && request2.credentials !== "omit") {
             const cookie2 = get_cookie_header(url, request2.headers.get("cookie"));
@@ -692,6 +703,17 @@ function disable_search(url) {
     });
   }
 }
+async function unwrap_promises(object) {
+  var _a;
+  for (const key2 in object) {
+    if (typeof ((_a = object[key2]) == null ? void 0 : _a.then) === "function") {
+      return Object.fromEntries(
+        await Promise.all(Object.entries(object).map(async ([key3, value]) => [key3, await value]))
+      );
+    }
+  }
+  return object;
+}
 async function load_server_data({ event, state, node, parent }) {
   var _a;
   if (!(node == null ? void 0 : node.server))
@@ -769,13 +791,6 @@ async function load_data({ event, fetcher, node, parent, server_data_promise }) 
   });
   const data = await node.shared.load.call(null, load_event);
   return data ? unwrap_promises(data) : null;
-}
-async function unwrap_promises(object) {
-  const unwrapped = {};
-  for (const key2 in object) {
-    unwrapped[key2] = await object[key2];
-  }
-  return unwrapped;
 }
 function hash(value) {
   let hash2 = 5381;
@@ -985,7 +1000,8 @@ const quoted = /* @__PURE__ */ new Set([
   "unsafe-inline",
   "none",
   "strict-dynamic",
-  "report-sample"
+  "report-sample",
+  "wasm-unsafe-eval"
 ]);
 const crypto_pattern = /^(nonce|sha\d\d\d)-/;
 class BaseProvider {
@@ -1170,7 +1186,8 @@ async function render_response({
       routeId: event.routeId,
       status,
       url: event.url,
-      data
+      data,
+      form: form_value
     };
     const print_error = (property, replacement) => {
       Object.defineProperty(props.page, property, {
@@ -1226,32 +1243,6 @@ async function render_response({
   if (form_value) {
     serialized.form = devalue(form_value);
   }
-  const init_app = `
-		import { start } from ${s(prefixed(entry.file))};
-
-		start({
-			env: ${s(options.public_env)},
-			hydrate: ${page_config.ssr ? `{
-				status: ${status},
-				error: ${s(error2)},
-				node_ids: [${branch.map(({ node }) => node.index).join(", ")}],
-				params: ${devalue(event.params)},
-				routeId: ${s(event.routeId)},
-				data: ${serialized.data},
-				form: ${serialized.form}
-			}` : "null"},
-			paths: ${s(options.paths)},
-			target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode,
-			trailing_slash: ${s(options.trailing_slash)}
-		});
-	`;
-  const init_service_worker = `
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', function () {
-				navigator.serviceWorker.register('${options.service_worker}');
-			});
-		}
-	`;
   if (inline_styles.size > 0) {
     const content = Array.from(inline_styles.values()).join("\n");
     const attributes = [];
@@ -1277,15 +1268,34 @@ async function render_response({
     }
     attributes.unshift('rel="stylesheet"');
     head += `
-	<link href="${path}" ${attributes.join(" ")}>`;
+		<link href="${path}" ${attributes.join(" ")}>`;
   }
   if (page_config.csr) {
+    const init_app = `
+			import { start } from ${s(prefixed(entry.file))};
+
+			start({
+				env: ${s(options.public_env)},
+				hydrate: ${page_config.ssr ? `{
+					status: ${status},
+					error: ${s(error2)},
+					node_ids: [${branch.map(({ node }) => node.index).join(", ")}],
+					params: ${devalue(event.params)},
+					routeId: ${s(event.routeId)},
+					data: ${serialized.data},
+					form: ${serialized.form}
+				}` : "null"},
+				paths: ${s(options.paths)},
+				target: document.querySelector('[data-sveltekit-hydrate="${target}"]').parentNode,
+				trailing_slash: ${s(options.trailing_slash)}
+			});
+		`;
     for (const dep of modulepreloads) {
       const path = prefixed(dep);
       link_header_preloads.add(`<${encodeURI(path)}>; rel="modulepreload"; nopush`);
       if (state.prerendering) {
         head += `
-	<link rel="modulepreload" href="${path}">`;
+		<link rel="modulepreload" href="${path}">`;
       }
     }
     const attributes = ['type="module"', `data-sveltekit-hydrate="${target}"`];
@@ -1303,9 +1313,16 @@ async function render_response({
     ).join("\n	")}`;
   }
   if (options.service_worker) {
+    const init_service_worker = `
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('${prefixed("service-worker.js")}');
+				});
+			}
+		`;
     csp.add_script(init_service_worker);
     head += `
-			<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
+		<script${csp.script_needs_nonce ? ` nonce="${csp.nonce}"` : ""}>${init_service_worker}<\/script>`;
   }
   if (state.prerendering) {
     const http_equiv = [];
@@ -1966,6 +1983,9 @@ async function respond(request, options, state) {
           }
         }
         add_cookies_to_headers(response2.headers, Array.from(new_cookies.values()));
+        if (state.prerendering && event2.routeId !== null) {
+          response2.headers.set("x-sveltekit-routeid", event2.routeId);
+        }
         return response2;
       }),
       get request() {
@@ -2074,7 +2094,7 @@ class Server {
           get request() {
             throw new Error("request in handleError has been replaced with event. See https://github.com/sveltejs/kit/pull/3384 for details");
           }
-        }) ?? { message: event.routeId ? "Internal Error" : "Not Found" };
+        }) ?? { message: event.routeId != null ? "Internal Error" : "Not Found" };
       },
       hooks: null,
       manifest,
@@ -2082,7 +2102,7 @@ class Server {
       public_env: {},
       read,
       root: Root,
-      service_worker: null,
+      service_worker: false,
       app_template,
       app_template_contains_nonce: false,
       error_template,

@@ -1,9 +1,11 @@
 <script>
+  import {Link} from "svelte-routing"
   import GateWay from "./GateWay.svelte";
   import Vitelogo from "../../public/vite.svg";
   import Sveltelogo from "../assets/svelte.svg";
   import GitHublogo from "../assets/git_spaider.png"
   import GitBloglogo from "../assets/alphabet_B.svg"
+  let url = ""
 </script>
 
 <main>
@@ -20,9 +22,13 @@
     <a href ="https://github.com/LS2life" target="_blank">
       <img src={GitHublogo} class="logo github" alt="GitHub Logo" title="GitHub" />
     </a>
-    <a href ="GateWay" target="_self">
+    <!-- <a href ="https://ls2life.github.io/ls2git/{GateWay}" target="_self"> -->
+    <!-- <a href ={GateWay} target="_self"> -->
+    <!--<a href ="./GateWay.svelte" target="_self">-->
+    <!-- <Link href="/GateWay" target="_self"> -->
+    <Link linkProps={{to:'/GateWay'}} component={GateWaytarget="_self">
       <img src={GitBloglogo} class="logo gitblog" alt="GitHub Blog Logo" title="Github Blog">
-    </a>
+    </Link>
   </div>
 
   <p>
