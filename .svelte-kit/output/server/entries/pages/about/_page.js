@@ -1,6 +1,6 @@
 const dev = false;
 const csr = dev;
-const prerender = true;
+const prerender = false;
 export {
   csr,
   prerender

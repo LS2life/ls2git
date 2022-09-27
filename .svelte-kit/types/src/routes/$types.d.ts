@@ -15,4 +15,6 @@ export type PageLoad<OutputData extends OutputDataShape<PageParentData> = Output
 export type PageLoadEvent = Parameters<PageLoad>[0];
 export type PageData = Expand<Omit<PageParentData, keyof PageParentData & EnsureDefined<PageServerData>> & EnsureDefined<PageParentData & EnsureDefined<PageServerData>>>;
 export type LayoutServerData = null;
-export type LayoutData = Expand<LayoutParentData>;
+export type LayoutLoad<OutputData extends Partial<App.PageData> & Record<string, any> | void = Partial<App.PageData> & Record<string, any> | void> = Kit.Load<LayoutParams, LayoutServerData, LayoutParentData, OutputData>;
+export type LayoutLoadEvent = Parameters<LayoutLoad>[0];
+export type LayoutData = Expand<Omit<LayoutParentData, keyof LayoutParentData & EnsureDefined<LayoutServerData>> & EnsureDefined<LayoutParentData & EnsureDefined<LayoutServerData>>>;
