@@ -13,7 +13,7 @@ const config = {
 		}),
 		prerender: { entries: [] },
 		paths: {
-			base: dev ? '' : '/ls2git'
+			base: dev ? '' : 'ls2git/'
 		}
 	}
 };
