@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/ironman1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/+page/_app/immutable/start-ee1f5d3a.js">
-		<link rel="modulepreload" href="/+page/_app/immutable/chunks/index-7d11cbb7.js">
-		<link rel="modulepreload" href="/+page/_app/immutable/chunks/singletons-28b095b5.js">
+		<link rel="modulepreload" href="/_app/immutable/start-f829ad53.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index-8c341232.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons-583e5219.js">
+    <!-- <title>MyLap</title> -->
   </head>
   <body>
+    <div id="app"></div>
+    <!-- <script type="module" src="./routes/+page.svelte"></script> -->
     <div>
 		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/+page/_app/immutable/start-ee1f5d3a.js";
+			import { start } from "/_app/immutable/start-f829ad53.js";
 
 			start({
 				env: {},
 				hydrate: null,
-				paths: {"base":"/+page","assets":"/+page"},
+				paths: {"base":"","assets":""},
 				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				trailing_slash: "never"
+				trailing_slash: "always"
 			});
 		</script></div>
   </body>
