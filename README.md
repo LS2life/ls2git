@@ -1,4 +1,11 @@
-# create-svelte
+# Sveltekit로 Github pages 블로그 만들기
+
+[Github Pages Blog](https://ls2life.github.io/ls2git)
+
+- sveltekit으로 블로그 생성하여 oracle cloud Db서버 연결 가능할지 테스트 중입니다.
+- 페이지 자체는 기술 스텍을 보여주기 보다는 관심사에 대한 열거 및 자료 수집, 복습을 목적으로 합니다.
+
+## create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
