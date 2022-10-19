@@ -1,20 +1,20 @@
 import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex';
 
-const dev = process.env.NODE_ENV === 'development';
+import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.md'],
+	preprocess: [preprocess(), mdsvex(mdsvexConfig)],
 	kit: {
 		adapter: adapter({
 			fallback: '200.html',
 			trailingSlash: 'always',
-			pages: 'docs',
-			assets: 'docs'
-		}),
-		prerender: { entries: [] },
-		paths: {
-			base: dev ? '' : 'ls2git/'
-		}
+			pages: 'build',
+			assets: 'build'
+		})
 	}
 };
 

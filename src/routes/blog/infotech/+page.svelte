@@ -1,0 +1,1 @@
+<h1>infotech page</h1>
