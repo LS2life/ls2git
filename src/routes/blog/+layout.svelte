@@ -1,9 +1,17 @@
 <script>
+	import { blur } from 'svelte/transition';
 	import BHeader from '$lib/blog/BHeader.svelte';
 	import BNav from '../../lib/blog/BNav.svelte';
 	import Footer from '../../lib/Footer.svelte';
 </script>
 
+<svelte:head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Noto+Serif+KR:wght@700&display=Stylish&display=Gothic+A1:100,700=swap"
+		rel="stylesheet"
+	/>
+	<title>Blog</title>
+</svelte:head>
 <div class="app">
 	<BNav />
 	<BHeader />
@@ -23,7 +31,6 @@
 		background-color: white;
 	}
 	main {
-		border: 1px solid red;
 		flex: 1;
 		padding: 1rem;
 		width: 100%;

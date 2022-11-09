@@ -20,6 +20,9 @@
 		href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Noto+Serif+KR:wght@700&display=Stylish&display=Gothic+A1:100,700=swap"
 		rel="stylesheet"
 	/>
+
+	<link rel="icon" type="image/svg+xml" href="$lib/images/git_spider.svg" />
+	<title>Laboratory</title>
 </svelte:head>
 
 <div>

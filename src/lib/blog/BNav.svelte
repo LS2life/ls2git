@@ -18,8 +18,8 @@
 		</a>
 	</div>
 	<ul>
-		<li class:active={$page.url.pathname === '/blog/about'}>
-			<a href="/blog/about">About</a>
+		<li class:active={$page.url.pathname === '/blog/pageinfo'}>
+			<a href="/blog/pageinfo">PageInfo</a>
 		</li>
 		<li class:active={$page.url.pathname === '/blog/resume'}>
 			<a href="/blog/resume">Resume</a>
@@ -29,6 +29,9 @@
 		</li>
 		<li class:active={$page.url.pathname === '/blog/contact'}>
 			<a href="/blog/contact">Contact</a>
+		</li>
+		<li class:active={$page.url.pathname === '/blog/about'}>
+			<a href="/blog/about">About</a>
 		</li>
 	</ul>
 </nav>
