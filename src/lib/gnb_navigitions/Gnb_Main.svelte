@@ -6,7 +6,7 @@
 </script>
 
 <nav>
-	<div class="corner" class:active={$page.url.pathname === '/'}>
+	<div class="corner" class:active={$page.url.pathname === '/'} >
 		<a href="/">
 			<img src={HomeIcon} alt="GitHub lab" title="GitHub lab Home" />
 		</a>
@@ -36,12 +36,12 @@
 				<a href="/lab/etc">etC</a>
 			</li>
 			<!--
-			  {#each blog as {id, name}, i}
-			  <li class:active={$page.url.pathname === {name}}>
+			{#each blog as {id, name}, i}
+			<li class:active={$page.url.pathname === {name}}>
 				<Link to={id} href={name}>{id}</Link>
-			  </li>
-			  {/each}
-      -->
+			</li>
+			{/each}
+    -->
 		</ul>
 
 		<svg viewBox="0 0 2 3" aria-hidden="true">

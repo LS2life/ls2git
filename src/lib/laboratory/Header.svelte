@@ -10,7 +10,7 @@
 </div>
 -->
 <header>
-	<spen class:active={$page.url.pathname === '/lab'}>
+	<spen class:active={$page.url.pathname === '/lab' ? 'page' : undefined}>
 		<a href="/lab">
 			<h1>A|∀ & T|ㄱ & i|! & m|m & E|∃</h1>
 		</a>

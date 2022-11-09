@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { slide, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 </script>
 
 <!-- <nav transition:slide> -->

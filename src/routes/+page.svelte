@@ -1,14 +1,14 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
-	import Footer from '../lib/Footer.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	import '../styles.css';
-	import Vitelogo from '../lib/images/vite.svg';
-	import Sveltelogo from '../lib/images/svelte.svg';
-	import GitHublogo from '../lib/images/github_logo.svg';
-	import Gitlablogo from '../lib/images/lab_icon2.svg';
-	import Blog from '../lib/images/blog_icon_b.svg';
+	import Vitelogo from '$lib/images/vite.svg';
+	import Sveltelogo from '$lib/images/svelte.svg';
+	import GitHublogo from '$lib/images/github_logo.svg';
+	import Gitlablogo from '$lib/images/lab_icon2.svg';
+	import Bloglogo from '$lib/images/blog_icon_b.svg';
 </script>
 
 <!--
@@ -31,20 +31,20 @@
 <div class="app" transition:fade={{ delay: 500 }}>
 	<main>
 		<div class="config">
-			<a href="https://vitejs.dev" target="_blank">
+			<a href="https://vitejs.dev" >
 				<img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
 			</a>
-			<a href="https://svelte.dev" target="_blank">
+			<a href="https://svelte.dev" >
 				<img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
 			</a>
 			<h3>Made by</h3>
 			<h1>Vite + Svelte</h1>
 		</div>
 		<div>
-			<a class:active={$page.url.pathname === '/blog'} href="/blog" target="_blank">
-				<img class="logo blog" src={Blog} alt="blog" title="Normal Blog" />
+			<a class:active={$page.url.pathname === '/blog'} href="/blog">
+				<img class="logo blog" src={Bloglogo} alt="blog" title="Normal Blog" />
 			</a>
-			<a href="https://github.com/LS2life" target="_blank">
+			<a href="https://github.com/LS2life" >
 				<img class="logo github" src={GitHublogo} alt="GitHub Logo" title="GitHub" />
 			</a>
 			<a class:active={$page.url.pathname === '/lab'} href="/lab">
@@ -55,8 +55,8 @@
 		<div>
 			<p>
 				Check out
-				<a href="https://github.com/sveltejs/kit#readme" target="_blank"> GitHub</a>,
-				<a href="https://ls2life.github.io/ls2git/lab" target="_self" title="GitHub Lab href">
+				<a href="https://github.com/LS2life" alt ="Github" > GitHub</a>,
+				<a href="https://ls2life.github.io/ls2git" alt="Labrotory" title="GitHub Lab href">
 					My Lap</a
 				>! and I love you 3000 !
 			</p>

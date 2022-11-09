@@ -64,7 +64,7 @@
 		padding: 1em;
 		line-height: 2em;
 	}
-	p,li {
+	li {
 		color: gray;
 		text-align: left;
 	}

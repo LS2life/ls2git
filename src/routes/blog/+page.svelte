@@ -1,6 +1,6 @@
 <script>
 	import RadioT from '$lib/images/radio.png';
-	import {fade, fly} from 'svelte/transition'
+	import {fly} from 'svelte/transition'
 </script>
 
 <span in:fly="{{ delay:300}}">

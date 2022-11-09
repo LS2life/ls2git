@@ -1,8 +1,7 @@
 <script>
-	import { blur } from 'svelte/transition';
 	import BHeader from '$lib/blog/BHeader.svelte';
-	import BNav from '../../lib/blog/BNav.svelte';
-	import Footer from '../../lib/Footer.svelte';
+	import BNav from '$lib/blog/BNav.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -12,6 +11,7 @@
 	/>
 	<title>Blog</title>
 </svelte:head>
+
 <div class="app">
 	<BNav />
 	<BHeader />

@@ -1,5 +1,5 @@
 <script>
-  import InfoTech from '../../../lib/gnb_navigitions/M_Infotech.svelte'
+  import InfoTech from '$lib/gnb_navigitions/M_Infotech.svelte'
 </script>
 
 <InfoTech /> 

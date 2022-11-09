@@ -1,7 +1,3 @@
-<script>
-	let category = '<??>';
-</script>
-
 <div class="back">
 	<div class="drop">
 		<h1>

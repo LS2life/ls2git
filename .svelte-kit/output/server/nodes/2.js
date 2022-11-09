@@ -1,8 +1,7 @@
-import * as shared from '../entries/pages/_page.js';
+
 
 export const index = 2;
-export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/_page.svelte-4383ebd2.js';
-export { shared };
-export const imports = ["_app/immutable/components/pages/_page.svelte-4383ebd2.js","_app/immutable/chunks/index-66220184.js","_app/immutable/chunks/index-e366d1ab.js","_app/immutable/modules/pages/_page.js-758bd7e6.js","_app/immutable/chunks/_page-55c98031.js"];
-export const stylesheets = ["_app/immutable/assets/_page-8bad58d3.css"];
+export const component = async () => (await import('../entries/pages/blog/_layout.svelte.js')).default;
+export const file = '_app/immutable/components/pages/blog/_layout.svelte-17c12973.js';
+export const imports = ["_app/immutable/components/pages/blog/_layout.svelte-17c12973.js","_app/immutable/chunks/index-1e23d3bb.js","_app/immutable/chunks/stores-07950e15.js","_app/immutable/chunks/singletons-0f201f91.js","_app/immutable/chunks/erlenmeyer_flask_icon-d9c95ce5.js","_app/immutable/chunks/Footer-ab8493a7.js"];
+export const stylesheets = ["_app/immutable/assets/_layout-c429b390.css","_app/immutable/assets/Footer-e64a5365.css"];

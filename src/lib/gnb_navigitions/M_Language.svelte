@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import { scale, slide, blur, fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 </script>
 
 <!-- <nav transition:fly="{{ y: -100, duration: 1000 , delay: 1000}}"> -->

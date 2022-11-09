@@ -1,8 +1,7 @@
-import * as server from '../entries/pages/todos/_page.server.js';
+
 
 export const index = 4;
-export const component = async () => (await import('../entries/pages/todos/_page.svelte.js')).default;
-export const file = '_app/immutable/components/pages/todos/_page.svelte-7c1543fa.js';
-export { server };
-export const imports = ["_app/immutable/components/pages/todos/_page.svelte-7c1543fa.js","_app/immutable/chunks/index-66220184.js","_app/immutable/chunks/singletons-91c366fa.js","_app/immutable/chunks/index-e366d1ab.js"];
-export const stylesheets = ["_app/immutable/assets/_page-5c3529b5.css"];
+export const component = async () => (await import('../entries/pages/lab/engineering/_layout.svelte.js')).default;
+export const file = '_app/immutable/components/pages/lab/engineering/_layout.svelte-e49ea1aa.js';
+export const imports = ["_app/immutable/components/pages/lab/engineering/_layout.svelte-e49ea1aa.js","_app/immutable/chunks/index-1e23d3bb.js","_app/immutable/chunks/index-e96b8802.js","_app/immutable/chunks/index-15279b70.js","_app/immutable/chunks/stores-07950e15.js","_app/immutable/chunks/singletons-0f201f91.js"];
+export const stylesheets = ["_app/immutable/assets/_layout-efb7d87b.css"];

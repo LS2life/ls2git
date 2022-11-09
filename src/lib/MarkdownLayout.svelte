@@ -1,5 +1,4 @@
 <script>
-	import { transition_in } from 'svelte/internal';
 	import { fade } from 'svelte/transition';
 
 	export let title = '';
@@ -36,20 +35,12 @@
 		margin-left: 3%;
 		font-weight: bold;
 		font-family: 'Noto Serif KR', serif;
-		/* font-family: 'Do Hyeon', sans-serif; */
-		/* font-family: 'East Sea Dokdo', cursive; */
-		/* font-family: 'Hi Melody', cursive; */
-		/* font-family: 'Stylish', sans-serif; */
 	}
 	div,
 	p {
 		font-size: 1.2em;
 		line-height: 1;
 		text-align: left;
-		/* font-family: 'Hi-Melody'; */
-		/* font-family: 'Do Hyeon', sans-serif; */
-		/* font-family: 'East Sea Dokdo', cursive; */
-		/* font-family: 'Hi Melody', cursive; */
 		font-family: 'Stylish', sans-serif;
 	}
 </style>

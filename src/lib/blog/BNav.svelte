@@ -38,6 +38,9 @@
 
 <style>
 	nav {
+		position: sticky;
+		top: 0px;
+		z-index: 1;
 		display: flex;
 		justify-content: space-between;
 		background-image: linear-gradient(
@@ -54,7 +57,7 @@
 		display: flex;
 		align-items: center;
 		list-style: none;
-		padding: 0.5em;
+		/* padding: 0.5em; */
 	}
 	ul {
 		margin-right: 5%;
@@ -78,7 +81,7 @@
 	a {
 		font-size: 1.2em;
 		color: #ffffff;
-		text-decoration: inherit;
+		text-decoration: none;
 	}
 	a:hover {
 		text-decoration: underline;
