@@ -31,7 +31,7 @@
 			<a href="/blog/contact">Contact</a>
 		</li>
 		<li class:active={$page.url.pathname === '/blog/about'}>
-			<a href="/blog/about">About</a>
+			<a href="/blog/about" title='need improvements'>About</a>
 		</li>
 	</ul>
 </nav>

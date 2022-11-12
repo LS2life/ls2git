@@ -1,9 +1,9 @@
 <script>
-	import Header from '$lib/laboratory/Header.svelte';
-	import Navigations from '$lib/laboratory/Navigitions.svelte';
-	import Section from '$lib/laboratory/Section.svelte';
+	import Header from '$lib/lab/Header.svelte';
+	import Navigations from '$lib/lab/Navigitions.svelte';
+	import Section from '$lib/lab/Section.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import Navigitions from '$lib/laboratory/Navigitions.svelte';
+	import Navigitions from '$lib/lab/Navigitions.svelte';
 </script>
 
 <!--
