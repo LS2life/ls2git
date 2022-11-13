@@ -75,6 +75,12 @@
 		height: 1.8em;
 		padding: 1em;
 	}
+	.signposts_icon:hover,
+	.lab_icon:hover,
+	.blog_icon:hover {
+        transform:scaleX(1.15) scaleY(1.15) ;
+        transition:.1s;
+	}
 	li {
 		padding: 1em;
 	}

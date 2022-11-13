@@ -2,45 +2,50 @@
     import src from '$lib/images/ca.png'
 </script>
 
-<span>
-    <hr class="inline">
-</span>
-<span>
-    <span class="">
-        <hr/>
-        <h1 class="korname">이 상 수</h1>
-        <h2 class="engname">Lee Sang Su</h2>
-    </span>
-    <span>
+<div class="header">
+    <div class="history">
+        <hr class="historyline">
+    </div>
+    <span class="namecard">
+        <span class="nametext">
+            <hr>
+            <h1 class="korname">이 상 수</h1>
+            <h2 class="engname">Lee Sang Su</h2>
+        </span>
         <img {src} alt="pic ture">
     </span>
-</span>
-
-
+</div>
 
 <style>
-    span,h1,h2 {
-
-        border: 1px solid red;
+    div.history {
+        padding: 0 3rem;
+        display: flex;
     }
-    span {
-        display:flex; 
+    div.header {
+        display: flex;
     }
-
-    .inline{
-        display: inline;
-        width: 1px
+    .historyline {
+        text-align: left;
+        margin-left: 0;
+        display: inline-block;
+        width: 0.5px;
+        height: 200px;
     }
-    h2{
+    span.namecard {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 100px;
+        align-items: center;
+    }
+    h2 {
         text-align: right;
-        line-height: 1rem;
-    }
-    h1 {
-        text-align: center;
-
     }
     img {
-        height: 10rem;
-    }
+        width: 10rem;
+
+        text-align: left;
+        margin-left: 25rem;
+    } 
+
     
 </style>
