@@ -1,4 +1,5 @@
 <script>
+	import { fly } from 'svelte/transition';
     import eMail from '$lib/images/email_icon.png'
     import User from '$lib/images/user_icon.png'
     import {elasticOut} from 'svelte/easing'
@@ -21,24 +22,26 @@
 	}
 </script>
 
-<h1>CONTACT</h1>
-<hr />
-<br>
-<div>
-    <div class="centered">
-        <img src={eMail} alt="email icon">
-        <span>
-            <p in:spin="{{duration:4000}}">lovemylife00@naver.com</p>
-        </span>
+<span in:fly="{{delay:300}}">
+    <h1>CONTACT</h1>
+    <hr>
+    <br>
+    <div>
+        <div class="centered">
+            <img src={eMail} alt="email icon">
+            <span>
+                <p in:spin="{{duration:4000}}">lovemylife00@naver.com</p>
+            </span>
+        </div>
     </div>
-</div>
+</span>
 
 <style>
     hr { width: 12em; }
     img { height: 3em; }
     div {
         align-items: center;
-        margin:auto;
+        margin: auto;
         display: flex;
         justify-content: center;
     }

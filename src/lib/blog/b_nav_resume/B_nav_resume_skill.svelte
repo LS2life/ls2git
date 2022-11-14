@@ -4,7 +4,7 @@
     </h1>
     <h2>Frontend</h2>
     <ul>
-        <li>HTML</li>
+        <li> HTML </li>
         <li>CSS</li>
         <li>Svelte</li>
     </ul>
@@ -36,6 +36,9 @@
 </div>
 
 <style>
+    img {
+        height: 0.1rem;
+    }
     div {
         /* border: 1px solid red; */
         box-shadow: 2px 2px 3px 0px gray;
