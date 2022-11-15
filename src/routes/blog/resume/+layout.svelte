@@ -34,7 +34,8 @@
     .hist{
         /* border: 1px solid red; */
         width: 100%;
-        margin: 0 10px;
+        /* padding: 0 20px; */
+        margin: -6px 10px;
     }
 
 </style>

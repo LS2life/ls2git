@@ -3,6 +3,9 @@
 	import Signposts from '$lib/images/signposts_icon.svg';
 	import BlogIcon from '$lib/images/blog_icon.png';
 	import Laboratory from '$lib/images/erlenmeyer_flask_icon.svg';
+	import ViewInfo from '../../routes/blog/pageinfo/ViewInfo.svelte';
+
+	let showModal = false;
 </script>
 
 <nav>
@@ -19,7 +22,7 @@
 	</div>
 	<ul>
 		<li class:active={$page.url.pathname === '/blog/pageinfo'}>
-			<a href="/blog/pageinfo">PageInfo</a>
+			<a href="/blog/pageinfo" on:click="{() => showModal = true}">PageInfo</a>
 		</li>
 		<li class:active={$page.url.pathname === '/blog/resume'}>
 			<a href="/blog/resume">Resume</a>
@@ -35,12 +38,20 @@
 		</li>
 	</ul>
 </nav>
+{#if showModal}
+	<ViewInfo on:close="{() => showModal = false}">
+		<h2 slot="header">
+			PAGE INFO
+			<small><em>adjective</em></small>
+		</h2>
+	</ViewInfo>
+{/if}
 
 <style>
 	nav {
 		position: sticky;
 		top: 0px;
-		z-index: 1;
+		z-index: 2;
 		display: flex;
 		justify-content: space-between;
 		background-image: linear-gradient(

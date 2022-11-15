@@ -36,9 +36,6 @@
 </div>
 
 <style>
-    img {
-        height: 0.1rem;
-    }
     div {
         /* border: 1px solid red; */
         box-shadow: 2px 2px 3px 0px gray;

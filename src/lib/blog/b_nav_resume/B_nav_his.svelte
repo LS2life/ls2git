@@ -75,8 +75,12 @@
 </div>
 
 <style>
+    .hist {
+
+        box-shadow: 2px 2px 3px 0px gray;
+    }
     h1 {
-        /* border: 1px solid red; */
+        /* border: 1px solid rgb(169, 112, 42); */
         text-align: center;
         font-size: 2rem;
     }
