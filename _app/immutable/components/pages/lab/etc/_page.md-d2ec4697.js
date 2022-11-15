@@ -1,0 +1,7 @@
+import{S as v,i as y,s as B,Y as g,w,x as R,y as k,Z as q,_ as x,f as M,t as P,z as S,$,k as m,q as i,l as d,m as j,r as f,h,b as z,G as l,B as C}from"../../../../chunks/index-6e797781.js";import{M as E}from"../../../../chunks/MarkdownLayout-bbc314be.js";function G(_){let e,n,o,r,t,a,c,p;return{c(){e=m("p"),n=i("\uAE30\uD0C0\uB294 \uC77C\uB809!"),o=m("br"),r=i(`
+\uAE30\uD0C0\uB294 \uC18C\uC6B8!`),t=m("br"),a=i(`
+\uAE30\uD0C0\uB294 \uBCA0\uC774\uC2A4!`),c=m("br"),p=i(`
+\uAE30\uD0C0\uB294 \uC7AC\uC988!`)},l(u){e=d(u,"P",{});var s=j(e);n=f(s,"\uAE30\uD0C0\uB294 \uC77C\uB809!"),o=d(s,"BR",{}),r=f(s,`
+\uAE30\uD0C0\uB294 \uC18C\uC6B8!`),t=d(s,"BR",{}),a=f(s,`
+\uAE30\uD0C0\uB294 \uBCA0\uC774\uC2A4!`),c=d(s,"BR",{}),p=f(s,`
+\uAE30\uD0C0\uB294 \uC7AC\uC988!`),s.forEach(h)},m(u,s){z(u,e,s),l(e,n),l(e,o),l(e,r),l(e,t),l(e,a),l(e,c),l(e,p)},p:C,d(u){u&&h(e)}}}function L(_){let e,n;const o=[_[0],b];let r={$$slots:{default:[G]},$$scope:{ctx:_}};for(let t=0;t<o.length;t+=1)r=g(r,o[t]);return e=new E({props:r}),{c(){w(e.$$.fragment)},l(t){R(e.$$.fragment,t)},m(t,a){k(e,t,a),n=!0},p(t,[a]){const c=a&1?q(o,[a&1&&x(t[0]),a&0&&x(b)]):{};a&2&&(c.$$scope={dirty:a,ctx:t}),e.$set(c)},i(t){n||(M(e.$$.fragment,t),n=!0)},o(t){P(e.$$.fragment,t),n=!1},d(t){S(e,t)}}}const b={layout:"mdx",title:"\uC774\uAC70\uC2A8 \uAE30\uD0C0!!!",update:"2022-10-19",categories:"\uBD84\uB958:\uAE30\uD0C0, \uC5F0\uC2B5"};function Y(_,e,n){return _.$$set=o=>{n(0,e=g(g({},e),$(o)))},e=$(e),[e]}class D extends v{constructor(e){super(),y(this,e,Y,L,B,{})}}export{D as default,b as metadata};
