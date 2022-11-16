@@ -5,7 +5,7 @@
 	let url = '';
 </script>
 
-<nav>
+<nav class="bar">
 	<div class="corner" class:active={$page.url.pathname === '/'} >
 		<a href="/">
 			<img src={HomeIcon} alt="GitHub lab" title="GitHub lab Home" />
@@ -26,9 +26,11 @@
 			<li class:active={$page.url.pathname === '/lab/scific'}>
 				<a href="/lab/scific">SciFic</a>
 			</li>
+<!--
 			<li class:active={$page.url.pathname === '/lab/language'}>
 				<a href="/lab/language">Language</a>
 			</li>
+-->
 			<li class:active={$page.url.pathname === '/lab/cosmos'}>
 				<a href="/lab/cosmos">Cosmos</a>
 			</li>
@@ -49,7 +51,7 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
+	<div class="corner2">
 		<a href="https://github.com/ls2life">
 			<img src={GithubIcon} alt="GitHub" title="GitHub" />
 		</a>
@@ -61,11 +63,17 @@
 		width: 2.5em;
 		height: 2.5em;
 	}
+	.corner2 img {
+		height: 3rem;
+	}
 
+	.bar {
+		position: sticky;
+		top: 0px;
+	}
 	nav {
 		display: flex;
-		/* --background: rgba(180, 180, 180, 0.7); */
-		--background: rgba(252, 252, 252, 0.7);
+		--background: rgba(255, 255, 255, 0.7);
 		justify-content: space-between;
 	}
 

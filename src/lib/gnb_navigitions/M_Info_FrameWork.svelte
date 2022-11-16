@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<nav in:fly={{ x: -100, duration: 500, delay: 500 }} out:fly={{ x: 100 }}>
+<nav in:fly={{ delay: 300 }}>
 	<ul>
 		<li class:active={$page.url.pathname === '/lab/infotech/framework/svelte'}>
 			<a href="/lab/infotech/framework/svelte">Svelte</a>
@@ -23,6 +23,8 @@
 	}
 
 	ul {
+		border: 1px solid teal;
+
 		position: relative;
 		padding: 0;
 		margin: 0;
@@ -36,8 +38,6 @@
 	}
 
 	li {
-		border: 1px solid teal;
-
 		position: relative;
 		height: 100%;
 	}

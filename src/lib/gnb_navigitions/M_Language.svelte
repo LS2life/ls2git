@@ -4,7 +4,7 @@
 </script>
 
 <!-- <nav transition:fly="{{ y: -100, duration: 1000 , delay: 1000}}"> -->
-<nav in:fly={{ x: -100, duration: 500, delay: 500 }} out:fly={{ x: 100 }}>
+<nav in:fly={{ delay: 300 }}>
 	<ul>
 		<li class:active={$page.url.pathname === '/lab/language/english'}>
 			<a href="/lab/language/english">English</a>
@@ -22,7 +22,7 @@
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(200, 200, 200, 0.7);
+		--background: rgba(255, 255, 255, 0.7);
 	}
 
 	ul {
@@ -39,8 +39,6 @@
 	}
 
 	li {
-		border: 1px solid teal;
-
 		position: relative;
 		height: 100%;
 	}

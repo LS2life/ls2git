@@ -42,7 +42,7 @@
 	<ViewInfo on:close="{() => showModal = false}">
 		<h2 slot="header">
 			PAGE INFO
-			<small><em>adjective</em></small>
+			<small><em></em></small>
 		</h2>
 	</ViewInfo>
 {/if}

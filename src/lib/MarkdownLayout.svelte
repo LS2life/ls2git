@@ -16,20 +16,17 @@
 	<meta name="description" content={summary} />
 </svelte:head>
 
-<div class="post" in:fade={{ delay: 500 }} out:fade>
+<div class="post" in:fade={{ delay: 300 }}>
 	<h1>{title}</h1>
 	<p><time>{update}</time></p>
 	<categorie>{categories}</categorie>
 	<hr />
-	<slot />
+	<main>
+		<slot />
+	</main>
 </div>
 
 <style>
-	.post {
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-
 	h1 {
 		font-size: 2.5em;
 		margin-left: 3%;
@@ -37,10 +34,18 @@
 		font-family: 'Noto Serif KR', serif;
 	}
 	div,
+	categorie,
 	p {
-		font-size: 1.2em;
-		line-height: 1;
+		/* border: 1px solid red; */
+
+		margin: 0 3%;
+		font-size: 1.2rem;
+		line-height: 1.2;
 		text-align: left;
 		font-family: 'Stylish', sans-serif;
+	}
+	main {
+		padding: 0 1rem;
+		text-decoration: none;
 	}
 </style>

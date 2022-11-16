@@ -4,7 +4,7 @@
 </script>
 
 <!-- <nav transition:slide> -->
-<nav in:fly={{ x: -100, duration: 500, delay: 500 }} out:fly={{ x: 100 }}>
+<nav in:fly={{ delay: 300 }}>
 	<ul>
 		<li class:active={$page.url.pathname === '/lab/infotech/codename'}>
 			<a href="/lab/infotech/codename">CodeName</a>
@@ -18,6 +18,9 @@
 		<li class:active={$page.url.pathname === '/lab/infotech/os'}>
 			<a href="/lab/infotech/os">OS</a>
 		</li>
+		<li class:active={$page.url.pathname === '/lab/infotech/tool'}>
+			<a href="/lab/infotech/tool">Tool</a>
+		</li>
 		<li class:active={$page.url.pathname === '/lab/infotech/vc'}>
 			<a href="/lab/infotech/vc">VC</a>
 		</li>
@@ -26,9 +29,11 @@
 
 <style>
 	nav {
+		position: sticky;
+		top: 2rem;
 		display: flex;
 		justify-content: center;
-		--background: rgba(200, 200, 200, 0.7);
+		--background: rgba(255, 255, 255, 0.7);
 	}
 
 	ul {
@@ -45,7 +50,7 @@
 	}
 
 	li {
-		border: 1px solid teal;
+		border: 1px solid gray;
 		position: relative;
 		height: 100%;
 	}

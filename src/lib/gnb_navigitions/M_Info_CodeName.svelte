@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<nav in:fly={{ x: -100, duration: 500, delay: 500 }} out:fly={{ x: 100 }}>
+<nav in:fly={{ delay: 300 }} >
 	<ul>
 		<li class:active={$page.url.pathname === '/lab/infotech/codename/html5'}>
 			<a href="/lab/infotech/codename/html5">HTML5</a>
@@ -34,13 +34,17 @@
 
 <style>
 	nav {
+
+		position: sticky;
+		top: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		--background: rgba(230, 230, 230, 0.7);
+		--background: rgba(255, 255, 255, 0.7);
 	}
 
 	ul {
+		border: 1px solid gray;
 		position: relative;
 		padding: 0;
 		margin: 0;
@@ -54,8 +58,7 @@
 	}
 
 	li {
-		border: 1px solid darkgreen;
-
+		/* border: 1px solid gray; */
 		position: relative;
 		height: 100%;
 	}

@@ -1,5 +1,5 @@
 <script>
-  import CodeName from '../../../../lib/gnb_navigitions/M_Info_CodeName.svelte'
+  import CodeName from '$lib/gnb_navigitions/M_Info_CodeName.svelte'
 </script>
 
 <CodeName />

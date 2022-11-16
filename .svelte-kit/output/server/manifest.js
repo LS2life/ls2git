@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([".nojekyll","baby_groot.svg","favicon.png","git_spider.svg","robots.txt"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png",".txt":"text/plain"},
 	_: {
-		entry: {"file":"_app/immutable/start-010f3c27.js","imports":["_app/immutable/start-010f3c27.js","_app/immutable/chunks/index-6e797781.js","_app/immutable/chunks/singletons-b9e60cf0.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-7b185d07.js","imports":["_app/immutable/start-7b185d07.js","_app/immutable/chunks/index-0ae3e08b.js","_app/immutable/chunks/singletons-a82ee7f7.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
@@ -57,7 +57,13 @@ export const manifest = {
 			() => import('./nodes/48.js'),
 			() => import('./nodes/49.js'),
 			() => import('./nodes/50.js'),
-			() => import('./nodes/51.js')
+			() => import('./nodes/51.js'),
+			() => import('./nodes/52.js'),
+			() => import('./nodes/53.js'),
+			() => import('./nodes/54.js'),
+			() => import('./nodes/55.js'),
+			() => import('./nodes/56.js'),
+			() => import('./nodes/57.js')
 		],
 		routes: [
 			{
@@ -66,7 +72,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0], errors: [1], leaf: 13 },
+				page: { layouts: [0], errors: [1], leaf: 14 },
 				endpoint: null
 			},
 			{
@@ -75,7 +81,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0], errors: [1], leaf: 14 },
+				page: { layouts: [0], errors: [1], leaf: 15 },
 				endpoint: null
 			},
 			{
@@ -84,7 +90,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2], errors: [1,,], leaf: 15 },
+				page: { layouts: [0,2], errors: [1,,], leaf: 16 },
 				endpoint: null
 			},
 			{
@@ -93,7 +99,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2], errors: [1,,], leaf: 16 },
+				page: { layouts: [0,2], errors: [1,,], leaf: 17 },
 				endpoint: null
 			},
 			{
@@ -102,7 +108,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2], errors: [1,,], leaf: 17 },
+				page: { layouts: [0,2], errors: [1,,], leaf: 18 },
 				endpoint: null
 			},
 			{
@@ -111,7 +117,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2], errors: [1,,], leaf: 18 },
+				page: { layouts: [0,2], errors: [1,,], leaf: 19 },
 				endpoint: null
 			},
 			{
@@ -120,7 +126,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2], errors: [1,,], leaf: 19 },
+				page: { layouts: [0,2], errors: [1,,], leaf: 20 },
 				endpoint: null
 			},
 			{
@@ -129,7 +135,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,2,3], errors: [1,,,], leaf: 20 },
+				page: { layouts: [0,2,3], errors: [1,,,], leaf: 21 },
 				endpoint: null
 			},
 			{
@@ -138,7 +144,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4], errors: [1,,], leaf: 21 },
+				page: { layouts: [0,4], errors: [1,,], leaf: 22 },
 				endpoint: null
 			},
 			{
@@ -147,7 +153,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4], errors: [1,,], leaf: 22 },
+				page: { layouts: [0,4], errors: [1,,], leaf: 23 },
 				endpoint: null
 			},
 			{
@@ -156,7 +162,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,5], errors: [1,,,], leaf: 23 },
+				page: { layouts: [0,4,5], errors: [1,,,], leaf: 24 },
 				endpoint: null
 			},
 			{
@@ -165,7 +171,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,5], errors: [1,,,], leaf: 24 },
+				page: { layouts: [0,4,5], errors: [1,,,], leaf: 25 },
 				endpoint: null
 			},
 			{
@@ -174,7 +180,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4], errors: [1,,], leaf: 25 },
+				page: { layouts: [0,4], errors: [1,,], leaf: 26 },
 				endpoint: null
 			},
 			{
@@ -183,7 +189,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6], errors: [1,,,], leaf: 26 },
+				page: { layouts: [0,4,6], errors: [1,,,], leaf: 27 },
 				endpoint: null
 			},
 			{
@@ -192,7 +198,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 27 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 28 },
 				endpoint: null
 			},
 			{
@@ -201,7 +207,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 28 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 29 },
 				endpoint: null
 			},
 			{
@@ -210,7 +216,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 29 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 30 },
 				endpoint: null
 			},
 			{
@@ -219,7 +225,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 30 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 31 },
 				endpoint: null
 			},
 			{
@@ -228,7 +234,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 31 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 32 },
 				endpoint: null
 			},
 			{
@@ -237,7 +243,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 33 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 34 },
 				endpoint: null
 			},
 			{
@@ -246,7 +252,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 32 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 33 },
 				endpoint: null
 			},
 			{
@@ -255,7 +261,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 34 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 35 },
 				endpoint: null
 			},
 			{
@@ -264,7 +270,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 35 },
+				page: { layouts: [0,4,6,7], errors: [1,,,,], leaf: 36 },
 				endpoint: null
 			},
 			{
@@ -273,25 +279,25 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,8], errors: [1,,,,], leaf: 36 },
-				endpoint: null
-			},
-			{
-				id: "/lab/infotech/dbms/MySQL",
-				pattern: /^\/lab\/infotech\/dbms\/MySQL\/?$/,
-				names: [],
-				types: [],
-				optional: [],
 				page: { layouts: [0,4,6,8], errors: [1,,,,], leaf: 37 },
 				endpoint: null
 			},
 			{
-				id: "/lab/infotech/dbms/Oracle",
-				pattern: /^\/lab\/infotech\/dbms\/Oracle\/?$/,
+				id: "/lab/infotech/dbms/mysql",
+				pattern: /^\/lab\/infotech\/dbms\/mysql\/?$/,
 				names: [],
 				types: [],
 				optional: [],
 				page: { layouts: [0,4,6,8], errors: [1,,,,], leaf: 38 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/dbms/oracle",
+				pattern: /^\/lab\/infotech\/dbms\/oracle\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,8], errors: [1,,,,], leaf: 39 },
 				endpoint: null
 			},
 			{
@@ -300,7 +306,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 39 },
+				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 40 },
 				endpoint: null
 			},
 			{
@@ -309,7 +315,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 40 },
+				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 41 },
 				endpoint: null
 			},
 			{
@@ -318,7 +324,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 41 },
+				page: { layouts: [0,4,6,9], errors: [1,,,,], leaf: 42 },
 				endpoint: null
 			},
 			{
@@ -327,7 +333,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 42 },
+				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 43 },
 				endpoint: null
 			},
 			{
@@ -336,7 +342,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 43 },
+				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 44 },
 				endpoint: null
 			},
 			{
@@ -345,7 +351,52 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 44 },
+				page: { layouts: [0,4,6,10], errors: [1,,,,], leaf: 45 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/tool",
+				pattern: /^\/lab\/infotech\/tool\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 46 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/tool/eclipse",
+				pattern: /^\/lab\/infotech\/tool\/eclipse\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 47 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/tool/jetbrains",
+				pattern: /^\/lab\/infotech\/tool\/jetbrains\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 48 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/tool/vim",
+				pattern: /^\/lab\/infotech\/tool\/vim\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 49 },
+				endpoint: null
+			},
+			{
+				id: "/lab/infotech/tool/vscode",
+				pattern: /^\/lab\/infotech\/tool\/vscode\/?$/,
+				names: [],
+				types: [],
+				optional: [],
+				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 50 },
 				endpoint: null
 			},
 			{
@@ -354,7 +405,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 45 },
+				page: { layouts: [0,4,6,12], errors: [1,,,,], leaf: 51 },
 				endpoint: null
 			},
 			{
@@ -363,7 +414,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,6,11], errors: [1,,,,], leaf: 46 },
+				page: { layouts: [0,4,6,12], errors: [1,,,,], leaf: 52 },
 				endpoint: null
 			},
 			{
@@ -372,7 +423,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,12], errors: [1,,,], leaf: 47 },
+				page: { layouts: [0,4,13], errors: [1,,,], leaf: 53 },
 				endpoint: null
 			},
 			{
@@ -381,7 +432,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,12], errors: [1,,,], leaf: 48 },
+				page: { layouts: [0,4,13], errors: [1,,,], leaf: 54 },
 				endpoint: null
 			},
 			{
@@ -390,7 +441,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,12], errors: [1,,,], leaf: 49 },
+				page: { layouts: [0,4,13], errors: [1,,,], leaf: 55 },
 				endpoint: null
 			},
 			{
@@ -399,7 +450,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4,12], errors: [1,,,], leaf: 50 },
+				page: { layouts: [0,4,13], errors: [1,,,], leaf: 56 },
 				endpoint: null
 			},
 			{
@@ -408,7 +459,7 @@ export const manifest = {
 				names: [],
 				types: [],
 				optional: [],
-				page: { layouts: [0,4], errors: [1,,], leaf: 51 },
+				page: { layouts: [0,4], errors: [1,,], leaf: 57 },
 				endpoint: null
 			}
 		],

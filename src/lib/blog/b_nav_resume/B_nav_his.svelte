@@ -20,7 +20,7 @@
             <div class="hleft">
                 <h2 class="dotleft">국가평생교육진흥원</h2>
                 <hr>
-                <h3>안전공학 > 소방학  3.7/4.5</h3>
+                <h3>안전공학 > 소방학 </h3>
                 <ul>
                     <li>2013.02 ~ 2015.02</li>
                 </ul>
@@ -29,7 +29,7 @@
             <div class="hleft">
                 <h2 class="dotleft">대구보건대학</h2>
                 <hr>
-                <h3>안전공학 > 소방안전관리 3.6/4.5</h3>
+                <h3>안전공학 > 소방안전관리 </h3>
                 <ul>
                     <li>2004.03 ~ 2009.02</li>
                 </ul>
@@ -76,18 +76,17 @@
 
 <style>
     .hist {
-
         box-shadow: 2px 2px 3px 0px gray;
     }
     h1 {
         /* border: 1px solid rgb(169, 112, 42); */
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
     hr {
         display: block;
         height: 891px;
-        width: 0.5px;
+        width: 0.1px;
     }
     sub {
         color: gray;
@@ -104,7 +103,7 @@
         position: relative;
         height: 0.1px;
         width: 390px;
-        top: -25px;
+        top: -22px;
 
         left: 6px;
     }
@@ -112,7 +111,7 @@
         position: relative;
         height: 0.1px;
         width: 390px;
-        top: -25px;
+        top: -22px;
 
         right: 6px;
 
@@ -130,10 +129,9 @@
 
     .hleft h2, .hright h2 {
         /* border: 1px solid red; */
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         position: relative;
         padding: 1rem;
-        font-size: 27px;
         color:#000;
         line-height:  1;
         text-align: left;

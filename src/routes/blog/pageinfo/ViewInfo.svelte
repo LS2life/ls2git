@@ -74,4 +74,4 @@ if (previously_focused) {
     background: white;
 }
 
-</style>ndex >= 0);
+</style>

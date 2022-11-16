@@ -22,10 +22,30 @@
 	<title>Laboratory</title>
 </svelte:head>
 
-<div>
+<div class="app">
 	<Header />
 	<Navigations />
-	<slot><!-- optional fallback --></slot>
+	<main>
+		<slot><!-- optional fallback --></slot>
+	</main>
 	<!--// <Aside /> -->
 	<Footer />
 </div>
+
+<style>
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	main {
+		/* border: 1px solid red; */
+		padding: 0 1rem;
+		text-align: left;
+		flex: 1;
+		width: 100%;
+		max-width: 64rem;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+</style>

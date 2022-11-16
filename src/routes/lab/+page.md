@@ -2,12 +2,44 @@
 layout: mdx
 title: 'GitHub Pages + Sveltekit'
 update: '2022-10-19'
-categories: 분류:Blog, 추가 업데이트 필요
+categories: sveltekit, git, github, page, Blog, 추가 업데이트 필요
 ---
 
-# 아직 공사중입니다.
+<h1> 아직 공사중입니다.</h1>
 
-# Warning! 워닝! 워닝!
+- infotech 
+  - codename 
+    - html5  
+    - css3
+    - javascript
+    - java
+    - python
+    - markdown
+    - c,c++
+    - c#
+  - dbms
+    - mysql
+    - oracle
+  - framework
+    - svelte
+    - spring boot
+  - os
+    - ubuntu
+    - Windows
+  - tool
+    - visual studio code
+    - vim
+    - eclipse
+    - jetbrains
+  - vc
+    - git, github
+- engineering
+  - ml
+- scific
+- cosmos
+- etc
+
+<h1>Warning! 워닝! 워닝!</h1> 
 
 - 추가 작업 남은 것들.
 
@@ -34,7 +66,7 @@ categories: 분류:Blog, 추가 업데이트 필요
   - Tree 메뉴
 
   - GNB 메뉴 - Tree 메뉴 전환 버튼 추가.
-
+  
 - Dark - light 전환 버튼 추가
 
   - light 모드

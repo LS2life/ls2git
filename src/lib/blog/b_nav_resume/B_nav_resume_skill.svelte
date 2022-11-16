@@ -54,6 +54,7 @@
     }
     h1 {
         text-align: left;
+        font-size: 2rem;
     }
     h2 {
         text-decoration-line: underline;
