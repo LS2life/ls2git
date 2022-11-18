@@ -13,6 +13,8 @@
 
 <style>
 	nav {
+		position: sticky;
+		top: 4rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;

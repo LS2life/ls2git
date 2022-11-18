@@ -1,5 +1,4 @@
 <h1>Windows</h1>
-<h1>Windows</h1>
-<h1>Windows</h1>
-<h1>Windows</h1>
-<h1>Windows</h1>
+<hr>
+
+<h2> 안에서 밖으로 보는거냐, 밖에서 안으로 보는거냐?</h2>

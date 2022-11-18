@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([".nojekyll","baby_groot.svg","favicon.png","git_spider.svg","robots.txt"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png",".txt":"text/plain"},
 	_: {
-		entry: {"file":"_app/immutable/start-7b185d07.js","imports":["_app/immutable/start-7b185d07.js","_app/immutable/chunks/index-0ae3e08b.js","_app/immutable/chunks/singletons-a82ee7f7.js"],"stylesheets":[]},
+		entry: {"file":"_app/immutable/start-12a4393f.js","imports":["_app/immutable/start-12a4393f.js","_app/immutable/chunks/index-a37d17cb.js","_app/immutable/chunks/singletons-66710338.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
