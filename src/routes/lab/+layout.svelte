@@ -1,4 +1,5 @@
 <script>
+	import '../../styles.css';
 	import Header from '$lib/lab/Header.svelte';
 	import Navigations from '$lib/lab/Navigitions.svelte';
 	import Section from '$lib/lab/Section.svelte';

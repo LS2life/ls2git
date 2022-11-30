@@ -82,6 +82,7 @@ declare module '$env/static/private' {
 	export const XAUTHORITY: string;
 	export const LS_COLORS: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
+	export const MOZ_USE_XINPUT2: string;
 	export const TERM_PROGRAM: string;
 	export const npm_lifecycle_script: string;
 	export const SSH_AGENT_LAUNCHER: string;
@@ -109,7 +110,6 @@ declare module '$env/static/private' {
 	export const npm_command: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
-	export const NODE_ENV: string;
 }
 
 /**
@@ -195,6 +195,7 @@ declare module '$env/dynamic/private' {
 		XAUTHORITY: string;
 		LS_COLORS: string;
 		VSCODE_GIT_IPC_HANDLE: string;
+		MOZ_USE_XINPUT2: string;
 		TERM_PROGRAM: string;
 		npm_lifecycle_script: string;
 		SSH_AGENT_LAUNCHER: string;
@@ -222,7 +223,6 @@ declare module '$env/dynamic/private' {
 		npm_command: string;
 		INIT_CWD: string;
 		EDITOR: string;
-		NODE_ENV: string;
 		[key: string]: string | undefined;
 	}
 }

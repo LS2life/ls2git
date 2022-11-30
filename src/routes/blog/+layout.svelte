@@ -1,4 +1,5 @@
 <script>
+	import '../../styles.css';
 	import BHeader from '$lib/blog/BHeader.svelte';
 	import BNav from '$lib/blog/BNav.svelte';
 	import Footer from '$lib/Footer.svelte';

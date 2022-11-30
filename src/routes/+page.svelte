@@ -3,67 +3,59 @@
 	import { page } from '$app/stores';
 	import Footer from '$lib/Footer.svelte';
 
-	import '../styles.css';
+	// import '../styles.css';
 	import Vitelogo from '$lib/images/vite.svg';
 	import Sveltelogo from '$lib/images/svelte.svg';
+	import Bloglogo from '$lib/images/blog_icon_b.svg';
 	import GitHublogo from '$lib/images/github_logo.svg';
 	import Gitlablogo from '$lib/images/lab_icon2.svg';
-	import Bloglogo from '$lib/images/blog_icon_b.svg';
+	import MyBlogLogo from '$lib/images/lab_icon.svg';
+	import Counter from './Counter.svelte';
 </script>
 
-<!--
-	* Use Better Commentes
+<svelte:head>
+	<link href='../styles.css' rel='stylesheet'>
+</svelte:head>
 
-    * 기본 프레임은 Blog, Laboratory로 구분
 
-    ! Blog는 최대한 정상적으로 만들 것 실험적사용 금지.
+<div class='app' transition:fade={{ delay:300 }}>
+    <main>
+        <div class="config">
+            <a href="https://vitejs.dev" >
+                <img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
+            </a>
+            <a href="https://svelte.dev" >
+                <img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
+            </a>
+            <h3>Made by</h3>
+            <h1>Vite + Svelte</h1>
+        </div>
+        <div>
+            <a class:active={$page.url.pathname === '/blog'} href="/blog">
+                <img class="logo blog" src={Bloglogo} alt="blog" title="Normal Blog" />
+            </a>
+            <a href="https://github.com/LS2life" >
+                <img class="logo github" src={GitHublogo} alt="GitHub Logo" title="GitHub" />
+            </a>
+            <a class:active={$page.url.pathname === '/lab'} href="/lab">
+                <img class="logo gitlab" src={Gitlablogo} alt="GitHub Lab Logo" title="Laboratory" />
+            </a>
+            <a class:active={$page.url.pathname === '/myblog'} href="/myblog">
+                <img class="logo myblog" src={MyBlogLogo} alt="Blog Lab Logo" title="Blog Laboratory" />
+            </a>
+        </div>
 
-	? Laboratory는 최대한 실험적 목적을 가질 것. 
-
-    * Page command hotkey를 vim type으로 구성.
-
-	* vue, react 코드 비교.
-
-	Todo : npm 추가 후 실행 할 것.
-    ! npm install -save [svelte-routing, marked, svelte-markdown]
--->
-
-<div class="app" transition:fade={{ delay: 500 }}>
-	<main>
-		<div class="config">
-			<a href="https://vitejs.dev" >
-				<img src={Vitelogo} class="logo vite" alt="Vite Logo" title="Vite" />
-			</a>
-			<a href="https://svelte.dev" >
-				<img src={Sveltelogo} class="logo svelte" alt="Svelte Logo" title="Svelte" />
-			</a>
-			<h3>Made by</h3>
-			<h1>Vite + Svelte</h1>
-		</div>
-		<div>
-			<a class:active={$page.url.pathname === '/blog'} href="/blog">
-				<img class="logo blog" src={Bloglogo} alt="blog" title="Normal Blog" />
-			</a>
-			<a href="https://github.com/LS2life" >
-				<img class="logo github" src={GitHublogo} alt="GitHub Logo" title="GitHub" />
-			</a>
-			<a class:active={$page.url.pathname === '/lab'} href="/lab">
-				<img class="logo gitlab" src={Gitlablogo} alt="GitHub Lab Logo" title="Laboratory" />
-			</a>
-		</div>
-
-		<div>
-			<p>
-				Check out
-				<a href="https://github.com/LS2life" alt ="Github" > GitHub</a>,
-				<a href="https://ls2life.github.io/ls2git" alt="Labrotory" title="GitHub Lab href">
-					My Lap</a
-				>! and I love you 3000 !
-			</p>
-		</div>
-	</main>
-
-	<Footer />
+        <div>
+            <p>
+                Check out
+                <a href="https://github.com/LS2life" alt ="Github" > GitHub</a>,
+                <a href="https://ls2life.github.io/ls2git" alt="Labrotory" title="GitHub Lab href">
+                    My Lap</a
+                >! and I love you 3000 !
+            </p>
+        </div>
+    </main>
+    <Footer />
 </div>
 
 <style>
@@ -120,7 +112,8 @@
 
 	.logo.blog,
 	.logo.github,
-	.logo.gitlab {
+	.logo.gitlab,
+	.logo.myblog {
 		height: 5em;
 		padding: 1em;
 	}
@@ -135,6 +128,6 @@
 		filter: drop-shadow(0 0 2em #ff0000aa);
 	}
 	.logo.gitlab:hover {
-		filter: drop-shadow(0 0 2em #00c3ffed);
-	}
+		filter: drop-shadow(0 0 2em
+    )}
 </style>
